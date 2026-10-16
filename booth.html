@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Photo Booth - PHOTOBOOM!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <a href="index.html" class="nav-brand">
+            PHOTOBOOM!
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <button
+            id="themeButton"
+            class="theme-button"
+            type="button"
+            aria-label="Toggle dark mode">
+            🌙
+        </button>
+
+    </nav>
+
+
+    <!-- Booth Page -->
+    <main class="booth-page">
+
+        <!-- Back Button -->
+        <a href="index.html" class="back-home">
+            Go Back
+        </a>
+
+
+        <!-- Booth Card -->
+        <div class="booth-card">
+
+            <!-- Cat Top -->
+            <img
+                src="images/cat6.png"
+                alt="Cute cat"
+                class="cat-image-6">
+
+            <!--Cat Right Bottom-->
+            <img
+                src="images/cat7.png"
+                alt="Cute cat"
+                class="cat-image-7">
+
+            <!--Cat Left Bottom-->
+            <img
+                src="images/cat8.png"
+                alt="Cute cat"
+                class="cat-image-8">
+
+            <!-- Camera Area -->
+            <div class="camera-container">
+
+                <!-- Undo Button -->
+                <button
+                    id="undo-button"
+                    class="undo-button"
+                    type="button">
+                    ↶
+                </button>
+
+
+                <!-- Camera -->
+                <video
+                    id="camera"
+                    autoplay
+                    playsinline>
+                </video>
+
+
+                <!-- Canvas -->
+                <canvas
+                    id="photo-canvas">
+                </canvas>
+
+
+                <!-- Countdown -->
+                <div
+                    id="countdown"
+                    class="countdown">
+                </div>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="filters">
+
+                <button
+                    class="filter-button active"
+                    data-filter="normal"
+                    type="button">
+
+                    <span class="filter-preview normal-preview"></span>
+                    <span>NORMAL</span>
+
+                </button>
+
+
+                <button
+                    class="filter-button"
+                    data-filter="bw"
+                    type="button">
+
+                    <span class="filter-preview bw-preview"></span>
+                    <span>B&W</span>
+
+                </button>
+
+
+                <button
+                    class="filter-button"
+                    data-filter="cool"
+                    type="button">
+
+                    <span class="filter-preview cool-preview"></span>
+                    <span>COOL</span>
+
+                </button>
+
+
+                <button
+                    class="filter-button"
+                    data-filter="warm"
+                    type="button">
+
+                    <span class="filter-preview warm-preview"></span>
+                    <span>WARM</span>
+
+                </button>
+
+            </div>
+
+
+            <!-- Photo Counter -->
+            <div class="photo-counter">
+                <span id="photo-count">1</span>/3
+            </div>
+
+
+            <!-- Photo Thumbnails -->
+            <div class="photo-thumbnails">
+
+                <div class="photo-thumbnail">
+                    <img
+                        id="thumbnail-1"
+                        alt="Photo 1">
+                </div>
+
+                <div class="photo-thumbnail">
+                    <img
+                        id="thumbnail-2"
+                        alt="Photo 2">
+                </div>
+
+                <div class="photo-thumbnail">
+                    <img
+                        id="thumbnail-3"
+                        alt="Photo 3">
+                </div>
+
+            </div>
+
+
+            <!-- Booth Controls -->
+            <div class="booth-controls">
+                
+
+                <!-- Delete -->
+                <button
+                    id="delete-photo"
+                    class="delete-button"
+                    type="button">
+                    🗑️
+                </button>
+
+
+                <!-- Shutter -->
+                <button
+                    id="take-photo"
+                    class="shutter-button"
+                    type="button"
+                    disabled>
+                </button>
+
+
+                <!-- Next -->
+                <a href="frame.html" class="next-button">
+                    NEXT
+                </a>
+
+            </div>
+
+
+            <!-- Photo Actions -->
+            <div class="photo-actions">
+
+                <button
+                    id="start-camera"
+                    class="booth-button"
+                    type="button">
+                    START CAMERA
+                </button>
+
+                <button
+                    id="retake-photo"
+                    class="booth-button"
+                    type="button"
+                    disabled>
+                    RETAKE
+                </button>
+
+                <button
+                    id="stop-camera"
+                    class="booth-button"
+                    type="button"
+                    disabled>
+                    STOP CAMERA
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Decorative BOOM -->
+        <div class="decorative-boom booth-boom boom-1">BOOM</div>
+        <div class="decorative-boom booth-boom boom-2">BOOM</div>
+        <div class="decorative-boom booth-boom boom-3">BOOM</div>
+        <div class="decorative-boom booth-boom boom-4">BOOM</div>
+        <div class="decorative-boom booth-boom boom-5">BOOM</div>
+
+    </main>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Choose Your Frame - PHOTOBOOM!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <a href="index.html" class="nav-brand">
+            PHOTOBOOM!
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <button
+            id="themeButton"
+            class="theme-button"
+            type="button"
+            aria-label="Toggle dark mode">
+            🌙
+        </button>
+
+    </nav>
+
+
+    <!-- FRAME PAGE -->
+    <main class="frame-page">
+
+        <!-- Go Back -->
+        <a href="booth.html" class="back-home">
+            Go Back
+        </a>
+
+
+        <!-- Title Image -->
+        <div class="frame-title">
+
+            <img
+                src="images/text1.png"
+                alt="Choose Your Frame">
+
+        </div>
+
+
+        <!-- Cat Decorative -->
+        <img
+            src="images/cat9.png"
+            alt=""
+            class="cat-image-9"
+        >
+
+        <img
+            src="images/cat10.png"
+            alt=""
+            class="cat-image-10"
+        >
+
+
+        <!-- Photo Frame Preview -->
+        <div class="frame-preview">
+
+            <!-- Tiga Photo hasil capture -->
+            <div class="photo-stack">
+
+                <img
+                    id="captured-photo-1"
+                    class="captured-photo"
+                    src=""
+                    alt="Captured Photo 1"
+                >
+
+                <img
+                    id="captured-photo-2"
+                    class="captured-photo"
+                    src=""
+                    alt="Captured Photo 2"
+                >
+
+                <img
+                    id="captured-photo-3"
+                    class="captured-photo"
+                    src=""
+                    alt="Captured Photo 3"
+                >
+
+            </div>
+
+
+            <!-- Frame yang dipilih -->
+            <img
+                id="frame-overlay"
+                class="frame-overlay"
+                src="images/frame1.png"
+                alt="Selected Photo Frame"
+            >
+
+        </div>
+
+
+        <!-- Frame Selection -->
+        <div class="frame-options">
+
+            <button
+                class="frame-button active"
+                data-frame="frame1.png">
+                <img src="icon/icon1.png" alt="frame 1">
+            </button>
+
+            <button
+                class="frame-button"
+                data-frame="frame2.png">
+                <img src="icon/icon2.png" alt="frame 2">
+            </button>
+                
+
+            <button
+                class="frame-button"
+                data-frame="frame3.png">
+                <img src="icon/icon3.png" alt="frame 3">
+            </button>
+                
+
+            <button
+                class="frame-button"
+                data-frame="frame4.png">
+                <img src="icon/icon4.png" alt="frame 4">
+            </button>
+
+
+            <button
+                class="frame-button"
+                data-frame="frame5.png">
+                <img src="icon/icon5.png" alt="frame 5">
+            </button>
+
+            <button
+                class="frame-button"
+                data-frame="frame6.png">
+                <img src="icon/icon6.png" alt="frame 6">
+            </button>
+
+
+            <button
+                class="frame-button"
+                data-frame="frame7.png">
+                <img src="icon/icon7.png" alt="frame 7">
+            </button>
+
+            <button
+                class="frame-button"
+                data-frame="frame8.png">
+                <img src="icon/icon8.png" alt="frame 8">
+            </button>
+
+            <button
+                class="frame-button"
+                data-frame="frame9.png">
+                <img src="icon/icon9.png" alt="frame 9">
+            </button>
+
+
+            <button
+                class="frame-button"
+                data-frame="frame10.png">
+                <img src="icon/icon10.png" alt="frame 10">
+            </button>
+
+        </div>
+
+
+        <!-- Next -->
+        <a href="sticker.html" class="next-button">
+            NEXT
+        </a>
+
+    </main>
+
+
+    <script src="script.js"></script>
+    <script src="frame-config.js"></script>
+    <script src="frame.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <filter id="shadow1" x="-10%" y="-10%" width="125%" height="125%">
+    <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="rgba(0,0,0,0.2)"/>
+  </filter>
+  <!-- Sticker White Outline -->
+  <path d="M40 70 L65 25 L100 45 L135 25 L160 70 C175 110 160 165 100 165 C40 165 25 110 40 70 Z" 
+        fill="#fdfaf3" stroke="#fdfaf3" stroke-width="14" stroke-linejoin="round" filter="url(#shadow1)"/>
+  <!-- Cat Head -->
+  <path d="M40 70 L65 25 L100 45 L135 25 L160 70 C175 110 160 165 100 165 C40 165 25 110 40 70 Z" 
+        fill="#532d3f"/>
+  <!-- Inner Ears -->
+  <polygon points="65,38 78,55 52,62" fill="#d99ca9"/>
+  <polygon points="135,38 122,55 148,62" fill="#d99ca9"/>
+  <!-- Eyes -->
+  <ellipse cx="72" cy="102" rx="18" ry="20" fill="#fcf4d9"/>
+  <ellipse cx="128" cy="102" rx="18" ry="20" fill="#fcf4d9"/>
+  <ellipse cx="74" cy="102" rx="11" ry="14" fill="#301824"/>
+  <ellipse cx="126" cy="102" rx="11" ry="14" fill="#301824"/>
+  <circle cx="78" cy="98" r="4" fill="#ffffff"/>
+  <circle cx="130" cy="98" r="4" fill="#ffffff"/>
+  <!-- Nose & Mouth -->
+  <polygon points="100,118 95,114 105,114" fill="#d99ca9"/>
+  <path d="M95 120 Q100 126 105 120" stroke="#fcf4d9" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Whiskers -->
+  <line x1="30" y1="108" x2="52" y2="108" stroke="#fcf4d9" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="32" y1="116" x2="52" y2="114" stroke="#fcf4d9" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="170" y1="108" x2="148" y2="108" stroke="#fcf4d9" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="168" y1="116" x2="148" y2="114" stroke="#fcf4d9" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

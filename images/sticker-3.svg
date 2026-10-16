@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 170" width="200" height="170">
+  <filter id="shadow3" x="-10%" y="-10%" width="125%" height="125%">
+    <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="rgba(0,0,0,0.15)"/>
+  </filter>
+  <!-- Cat Doodle Outline Face -->
+  <g filter="url(#shadow3)">
+    <path d="M 45,70 L 65,30 L 95,50 L 125,30 L 145,70 C 165,100 155,145 95,145 C 35,145 25,100 45,70 Z" 
+          fill="#fbf4ea" stroke="#5a3d31" stroke-width="6" stroke-linejoin="round"/>
+    <!-- Cute Eyes -->
+    <ellipse cx="72" cy="95" rx="6" ry="8" fill="#5a3d31"/>
+    <ellipse cx="118" cy="95" rx="6" ry="8" fill="#5a3d31"/>
+    <circle cx="74" cy="93" r="2" fill="#ffffff"/>
+    <circle cx="120" cy="93" r="2" fill="#ffffff"/>
+    <!-- Cheeks -->
+    <ellipse cx="58" cy="105" rx="8" ry="5" fill="#f7c2cb" opacity="0.85"/>
+    <ellipse cx="132" cy="105" rx="8" ry="5" fill="#f7c2cb" opacity="0.85"/>
+    <!-- Nose & Mouth -->
+    <circle cx="95" cy="103" r="3.5" fill="#5a3d31"/>
+    <path d="M 88,110 Q 95,116 102,110" stroke="#5a3d31" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Whiskers -->
+    <path d="M 25,92 Q 45,96 52,98" stroke="#5a3d31" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 23,106 Q 43,106 52,106" stroke="#5a3d31" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 27,120 Q 45,116 52,114" stroke="#5a3d31" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 165,92 Q 145,96 138,98" stroke="#5a3d31" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 167,106 Q 147,106 138,106" stroke="#5a3d31" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 163,120 Q 145,116 138,114" stroke="#5a3d31" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Sticker - PHOTOBOOM!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <a href="index.html" class="nav-brand">
+            PHOTOBOOM!
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <button id="themeButton" class="theme-button" type="button" aria-label="Toggle dark mode">
+            🌙
+        </button>
+
+    </nav>
+
+    <!-- Sticker Page -->
+    <main class="sticker-page">
+
+        <!-- Go Back -->
+        <a href="frame.html" class="back-home">
+            Go Back
+        </a>
+
+        <!-- Title -->
+        <div class="sticker-title-wrap">
+            <img src="images/text2.png" class="sticker-title" alt="Add Your Sticker">
+        </div>
+
+        <!-- Decorative Cats -->
+        <!-- <img src="images/cat9.png" alt="" class="cat-image-9">
+        <img src="images/cat10.png" alt="" class="cat-image-10"> -->
+
+        <!-- Photo Preview Area -->
+        <div class="sticker-photo-preview">
+
+            <div class="sticker-photo-stack">
+
+                <img id="sticker-photo-1" class="sticker-photo" src="" alt="Photo 1">
+
+                <img id="sticker-photo-2" class="sticker-photo" src="" alt="Photo 2">
+
+                <img id="sticker-photo-3" class="sticker-photo" src="" alt="Photo 3">
+
+            </div>
+
+            <!-- Frame Overlay -->
+            <img id="sticker-frame" class="sticker-frame" src="images/frame1.png" alt="Selected Frame">
+
+            <!-- Interactive Sticker Layer -->
+            <div id="sticker-layer"></div>
+
+        </div>
+
+        <!-- Sticker Quick Toolbar -->
+        <div class="sticker-toolbar">
+            <span class="sticker-hint">✨ Klik stiker untuk menempel, geser & putar sesukamu!</span>
+            <button id="sticker-clear-all" class="toolbar-button" type="button" title="Hapus semua stiker">
+                🗑️ Clear All
+            </button>
+        </div>
+
+        <!-- Sticker Selection Panel -->
+        <div class="sticker-options">
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-1.svg" title="Cat Face">
+                <img src="images/sticker-1.svg" alt="Cat Face">
+            </button>
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-2.svg" title="AWW">
+                <img src="images/sticker-2.svg" alt="AWW">
+            </button>
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-3.svg" title="Cat Doodle">
+                <img src="images/sticker-3.svg" alt="Cat Doodle">
+            </button>
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-4.svg" title="Hearts">
+                <img src="images/sticker-4.svg" alt="Hearts">
+            </button>
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-5.svg" title="CUTE">
+                <img src="images/sticker-5.svg" alt="CUTE">
+            </button>
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-6.svg" title="Walking Cat">
+                <img src="images/sticker-6.svg" alt="Walking Cat">
+            </button>
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-7.svg" title="BTW">
+                <img src="images/sticker-7.svg" alt="BTW">
+            </button>
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-8.svg" title="Shooting Stars">
+                <img src="images/sticker-8.svg" alt="Shooting Stars">
+            </button>
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-9.svg" title="#BFF">
+                <img src="images/sticker-9.svg" alt="#BFF">
+            </button>
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-10.svg" title="SO CUTE">
+                <img src="images/sticker-10.svg" alt="SO CUTE">
+            </button>
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-11.svg" title="Sparkles">
+                <img src="images/sticker-11.svg" alt="Sparkles">
+            </button>
+
+            <button class="sticker-button" type="button" data-sticker="images/sticker-12.svg" title="Rose Bouquet">
+                <img src="images/sticker-12.svg" alt="Rose Bouquet">
+            </button>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="sticker-navigation">
+
+            <a href="result.html" id="sticker-next" class="next-button">
+                NEXT
+            </a>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="frame-config.js"></script>
+    <script src="sticker.js"></script>
+
+</body>
+
+</html>

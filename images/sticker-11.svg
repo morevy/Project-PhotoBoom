@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <filter id="shadow11" x="-10%" y="-10%" width="125%" height="125%">
+    <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="rgba(0,0,0,0.18)"/>
+  </filter>
+  <g filter="url(#shadow11)">
+    <!-- Large Diamond Sparkle -->
+    <path d="M 65,15 Q 65,55 25,55 Q 65,55 65,95 Q 65,55 105,55 Q 65,55 65,15 Z" 
+          fill="#301824" stroke="#fdfaf3" stroke-width="3"/>
+    <!-- Medium Diamond Sparkle -->
+    <path d="M 120,70 Q 120,95 95,95 Q 120,95 120,120 Q 120,95 145,95 Q 120,95 120,70 Z" 
+          fill="#532d3f" stroke="#fdfaf3" stroke-width="2.5"/>
+    <!-- Small Sparkle -->
+    <circle cx="110" cy="40" r="4" fill="#532d3f"/>
+    <circle cx="50" cy="115" r="3.5" fill="#532d3f"/>
+  </g>
+</svg>

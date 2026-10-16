@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Foto - PHOTOBOOM!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <a href="index.html" class="nav-brand">
+            PHOTOBOOM!
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <button
+            id="themeButton"
+            class="theme-button"
+            type="button"
+            aria-label="Toggle dark mode">
+            🌙
+        </button>
+
+    </nav>
+
+    <!-- RESULT PAGE -->
+    <main class="result-page">
+
+        <!-- Back Button -->
+        <a href="sticker.html" class="back-home">
+            Go Back
+        </a>
+
+        <!-- Cat Decorative -->
+        <img src="images/cat11.png" alt="" class="cat-on-button">
+        <img src="images/cat12.png" alt="" class="cat-result-corner-left">
+        <img src="images/cat13.png" alt="" class="cat-result-corner-right">
+
+        <!-- Result Container -->
+        <div class="result-card">
+
+            <!-- Decorative Boom -->
+            <div class="decorative-boom boom-1">BOOM</div>
+            <div class="decorative-boom boom-6">BOOM</div>
+
+            <!-- Photostrip Final Preview -->
+            <div class="final-preview-container">
+
+                <div id="loading-spinner" class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Merender fotomu... 📸</p>
+                </div>
+
+                <img
+                    id="final-photo-img"
+                    class="final-photo-img"
+                    alt="PHOTOBOOM Result"
+                    style="display: none;"
+                >
+
+                <!-- Hidden canvas used for high-res generation -->
+                <canvas id="export-canvas" style="display: none;"></canvas>
+
+            </div>
+
+            <!-- Primary Action Buttons -->
+            <div class="result-actions">
+
+                <!-- Salin Tautan -->
+                <button
+                    id="btn-copy-link"
+                    class="result-pill-btn copy-btn"
+                    type="button">
+                    <span class="btn-icon">📋</span>
+                    <span>SALIN TAUTAN</span>
+                </button>
+
+                <!-- Simpan / Download (dengan hiasan kucing di atasnya) -->
+                <div class="download-btn-wrap">
+                    <button
+                        id="btn-download"
+                        class="result-pill-btn save-btn"
+                        type="button">
+                        <span class="btn-icon">📥</span>
+                        <span>SIMPAN</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Social Share Bar -->
+            <div class="social-share-bar">
+
+                <!-- WhatsApp -->
+                <button
+                    id="btn-share-wa"
+                    class="social-btn wa-btn"
+                    type="button"
+                    title="Bagikan ke WhatsApp">
+                    <svg viewBox="0 0 32 32" width="24" height="24" fill="currentColor">
+                        <path d="M16 2a13.9 13.9 0 0 0-12 21l-2 7.7 7.9-2A14 14 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.8-1.6l-.4-.2-4.7 1.2 1.3-4.5-.3-.4a11.6 11.6 0 1 1 9.9 5.5zm6.4-8.6c-.3-.2-2-.9-2.3-1s-.6-.2-.8.2-.9 1.1-1.1 1.3-.4.2-.7 0a9 9 0 0 1-2.6-1.6 10 10 0 0 1-1.8-2.2c-.2-.4 0-.6.2-.8l.5-.6c.2-.2.2-.4.3-.6s0-.4-.1-.6-.8-2-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7a1.4 1.4 0 0 0-1 .5 4.3 4.3 0 0 0-1.3 3.2 7.5 7.5 0 0 0 1.6 4 17.2 17.2 0 0 0 6.6 5.8c.8.4 1.5.6 2 .7a4.9 4.9 0 0 0 2.2.1 3.6 3.6 0 0 0 2.4-1.7 3 3 0 0 0 .2-1.7c-.2-.2-.4-.3-.7-.5z"/>
+                    </svg>
+                </button>
+
+                <!-- Instagram -->
+                <button
+                    id="btn-share-ig"
+                    class="social-btn ig-btn"
+                    type="button"
+                    title="Bagikan ke Instagram">
+                    <svg viewBox="0 0 32 32" width="24" height="24" fill="currentColor">
+                        <path d="M16 5c3.6 0 4 .1 5.4.2a7.4 7.4 0 0 1 2.5.5 4.4 4.4 0 0 1 2.5 2.5 7.4 7.4 0 0 1 .5 2.5c.1 1.4.2 1.8.2 5.3s-.1 4-.2 5.4a7.4 7.4 0 0 1-.5 2.5 4.4 4.4 0 0 1-2.5 2.5 7.4 7.4 0 0 1-2.5.5c-1.4.1-1.8.2-5.4.2s-4-.1-5.4-.2a7.4 7.4 0 0 1-2.5-.5 4.4 4.4 0 0 1-2.5-2.5 7.4 7.4 0 0 1-.5-2.5C5.1 20 5 19.6 5 16s.1-4 .2-5.4a7.4 7.4 0 0 1 .5-2.5 4.4 4.4 0 0 1 2.5-2.5 7.4 7.4 0 0 1 2.5-.5C12 5.1 12.4 5 16 5zm0-2.5C12.3 2.5 11.9 2.5 10.4 2.6a10 10 0 0 0-3.3.6A6.9 6.9 0 0 0 3.2 7.1a10 10 0 0 0-.6 3.3C2.5 11.9 2.5 12.3 2.5 16s.1 4.1.2 5.6a10 10 0 0 0 .6 3.3 6.9 6.9 0 0 0 3.9 3.9 10 10 0 0 0 3.3.6c1.5.1 1.9.2 5.6.2s4.1-.1 5.6-.2a10 10 0 0 0 3.3-.6 6.9 6.9 0 0 0 3.9-3.9 10 10 0 0 0 .6-3.3c.1-1.5.2-1.9.2-5.6s-.1-4.1-.2-5.6a10 10 0 0 0-.6-3.3 6.9 6.9 0 0 0-3.9-3.9 10 10 0 0 0-3.3-.6c-1.5-.1-1.9-.2-5.6-.2z"/>
+                        <path d="M16 9.1a6.9 6.9 0 1 0 6.9 6.9 6.9 6.9 0 0 0-6.9-6.9zm0 11.3a4.4 4.4 0 1 1 4.4-4.4 4.4 4.4 0 0 1-4.4 4.4zm7.2-11.8a1.6 1.6 0 1 1-1.6-1.6 1.6 1.6 0 0 1 1.6 1.6z"/>
+                    </svg>
+                </button>
+
+                <!-- Web Share API / More -->
+                <button
+                    id="btn-share-native"
+                    class="social-btn more-btn"
+                    type="button"
+                    title="Bagikan / Share Lainnya">
+                    <span style="font-size: 20px; font-weight: bold; line-height: 1;">•••</span>
+                </button>
+
+            </div>
+
+            <!-- Secondary Actions -->
+            <div class="result-extra-actions">
+                <a href="booth.html" class="extra-action-link">
+                    📸 Ambil Foto Baru
+                </a>
+                <span class="dot-separator">•</span>
+                <a href="index.html" class="extra-action-link">
+                    🏠 Halaman Utama
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Toast Feedback -->
+        <div id="result-toast" class="result-toast">
+            Tautan berhasil disalin! ✨
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="frame-config.js"></script>
+    <script src="result.js"></script>
+
+</body>
+</html>
